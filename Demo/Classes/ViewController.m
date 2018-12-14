@@ -7,7 +7,7 @@
 
 #import "ViewController.h"
 #import "SVProgressHUD.h"
-
+#import "SVProgressHUD+DTAdd.h"
 @interface ViewController()
 
 @property (nonatomic, readwrite) NSUInteger activityCount;
@@ -23,6 +23,8 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.activityCount = 0;
+    
+    [SVProgressHUD beginLoading];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
